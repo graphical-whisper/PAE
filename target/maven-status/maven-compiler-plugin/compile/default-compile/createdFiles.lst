@@ -1,5 +1,6 @@
 Ventanas\TablaDatosInst.class
 Ventanas\EditarProv$2.class
+com\mycompany\sistemapae\Prueba.class
 Ventanas\EliminarInst$5.class
 Ventanas\TablaDatosOperaciones$9.class
 Ventanas\EliminarProv$7.class
@@ -26,6 +27,7 @@ Ventanas\AgregarInst$3.class
 Ventanas\EliminarInst$3.class
 com\mycompany\sistemapae\InicioSesion$4.class
 Ventanas\TablaDatosOperaciones$7.class
+com\mycompany\sistemapae\Prb2.class
 Ventanas\AgregarOperacion$3.class
 Ventanas\TablaDatosInst$9.class
 Ventanas\EditarInst$5.class
@@ -54,9 +56,11 @@ Ventanas\Inicio$3.class
 Ventanas\TablaDatosProv$6.class
 Ventanas\TablaDatosProv.class
 Ventanas\AgregarOperacion$1.class
+com\mycompany\sistemapae\Prb.class
 Ventanas\TablaDatosInst$7.class
 Ventanas\EditarInst$4.class
 Ventanas\EditarProv$1.class
+com\mycompany\sistemapae\EjemploFlowLayout.class
 Ventanas\EliminarInst$7.class
 Ventanas\EditarInst.class
 Ventanas\EditarInst$1.class

@@ -10,6 +10,8 @@ import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
 import Acciones.EstablecerConexión;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 /**
  *
  * @author Personal
@@ -17,23 +19,46 @@ import Acciones.EstablecerConexión;
 public class TablaDatosOperaciones extends javax.swing.JFrame {
     private DefaultTableModel tableModel;
     private TableRowSorter<DefaultTableModel> rowSorter;
-
+    String institucion;
+    String provedor;
+    String FechaInicio;
+    String FechaFin;
+    int Valor;
+    String detalles;
     private JButton filterButton;
     /**
      * Creates new form TablaDatos
      */
     public TablaDatosOperaciones() {
         initComponents();
-        
         tableModel = new DefaultTableModel();
         tableModel.setColumnIdentifiers(new Object[]{"Institución", "Proveedor", "FechaInicio", "FechaFin", "Valor", "Detalles"});
         jTable1.setModel(tableModel);
         // Crear el TableRowSorter y asignarlo a la tabla
         rowSorter = new TableRowSorter<>(tableModel);
         jTable1.setRowSorter(rowSorter);
-
+        
         // Cargar todos los datos en la tabla al inicio
         cargarDatos();
+    }
+    private void eliminarDatos ( String institucion,String Provedor,String FechaI, String FechaF, int val, String detalles){
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String connectionURL = "jdbc:mysql://35.222.147.13:3306/PAE?user=root&password=842963";
+            Connection con = DriverManager.getConnection(connectionURL);
+            String sql = "DELETE FROM Operaciones WHERE Institución= ? AND Proveedor = ? AND FechaInicio=? AND FechaFinal=? AND Valor= ? AND Detalles=?";
+            PreparedStatement statement = con.prepareStatement(sql);
+            statement.setString(1, institucion);
+            statement.setString(2, Provedor);
+            statement.setString(3, FechaI);
+            statement.setString(4, FechaF);
+            statement.setInt(5, val);
+            statement.setString(6, detalles);
+            statement.executeUpdate();
+            con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     
     private void cargarDatos() {
@@ -59,6 +84,23 @@ public class TablaDatosOperaciones extends javax.swing.JFrame {
 
                 model.addRow(new Object[]{inst, prov, ini, fin, val, details});
             }
+            jTable1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                int fila_point = jTable1.rowAtPoint(e.getPoint());
+                int columna_point = 0;
+
+                if (fila_point > -1) {
+                    institucion = (String) tableModel.getValueAt(fila_point, columna_point);
+                    provedor = (String) tableModel.getValueAt(fila_point, 1);
+                    FechaInicio = (String) tableModel.getValueAt(fila_point, 2);
+                    FechaFin = (String) tableModel.getValueAt(fila_point, 3);
+                    Valor = (int) tableModel.getValueAt(fila_point, 4);
+                    detalles = (String) tableModel.getValueAt(fila_point, 5);
+                    
+                }
+            }
+        });
 
             con.close();
         } catch (Exception e) {
@@ -91,6 +133,7 @@ public class TablaDatosOperaciones extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -169,6 +212,13 @@ public class TablaDatosOperaciones extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setText("Eliminar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -189,8 +239,10 @@ public class TablaDatosOperaciones extends javax.swing.JFrame {
                             .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jTextField1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addGap(138, 138, 138))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2)
+                            .addComponent(jButton1))
+                        .addGap(34, 34, 34))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jButton4)
@@ -200,20 +252,18 @@ public class TablaDatosOperaciones extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)
-                            .addComponent(jButton5))
-                        .addGap(6, 6, 6)
-                        .addComponent(jButton3)
-                        .addGap(56, 56, 56))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(73, 73, 73)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton5)
+                    .addComponent(jButton1))
+                .addGap(6, 6, 6)
+                .addComponent(jButton3)
+                .addGap(5, 5, 5)
+                .addComponent(jButton2)
+                .addGap(28, 28, 28)
                 .addComponent(jButton4)
                 .addContainerGap())
         );
@@ -290,6 +340,10 @@ if (!filterText.isEmpty()) {
         new AgregarOperacion().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        eliminarDatos(institucion, provedor, FechaInicio, FechaFin, Valor, detalles);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -328,6 +382,7 @@ if (!filterText.isEmpty()) {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;

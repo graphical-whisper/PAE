@@ -95,7 +95,7 @@ public class RegistroDAO {
             return generatedId;
         }
     }
-    public int RegistrarOp(String Nombre, String Dep, String Ciudad, String Numero, String tel, String producto) throws ClassNotFoundException, SQLException {
+    public void RegistrarOp(String Nombre, String Dep, String Ciudad, String Numero, String tel, String producto) throws ClassNotFoundException, SQLException {
         try (Connection con = DriverManager.getConnection(DB_URL, USER, PASSWORD)) {
             String sql1 = "INSERT INTO Operaciones(Institución, Proveedor, FechaInicio, FechaFinal, Valor, Detalles) VALUES(?,?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
@@ -103,23 +103,16 @@ public class RegistroDAO {
             ps.setString(1, Nombre);
             ps.setString(2, Dep);
             ps.setString(3, Ciudad);
-            ps.setString(4, Numero);
+            ps.setString(4, producto);
             ps.setString(5, tel);
-            ps.setString(6, producto);
+            ps.setString(6, Numero);
 
-            int affectedRows = ps.executeUpdate();
-            int generatedId = -1;
+            ps.executeUpdate();
+            
 
-            if (affectedRows > 0) {
-                ResultSet generatedKeys = ps.getGeneratedKeys();
-                if (generatedKeys.next()) {
-                    generatedId = generatedKeys.getInt(1);
-                }
-            }
+            JOptionPane.showMessageDialog(null, "Datos agregados a la base de datos.");
 
-            JOptionPane.showMessageDialog(null, "Datos agregados a la base de datos. ID generado: " + generatedId);
-
-            return generatedId;
+            
         }
     }
 }

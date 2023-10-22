@@ -213,8 +213,7 @@ public class AgregarOperacion extends javax.swing.JFrame {
 
         try {
             // Llama al método para registrar la institución con la información obtenida
-            int idAsignado = objDAO.RegistrarOp(nombre, dep, ciudad, numeroStr, tel, correo);
-            JOptionPane.showMessageDialog(this, "Operación registrada con éxito. ID asignado: " + idAsignado);
+            objDAO.RegistrarOp(nombre, dep, ciudad, numeroStr, tel, correo);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(AgregarInst.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {

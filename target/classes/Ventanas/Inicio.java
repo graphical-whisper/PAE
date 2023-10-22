@@ -104,6 +104,7 @@ public class Inicio extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ventanas/Salir (1).jpg"))); // NOI18N
         jMenu2.setText("Salir");
 
         jMenuItem4.setText("Salir");

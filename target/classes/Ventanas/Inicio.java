@@ -46,8 +46,14 @@ public class Inicio extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 94, 72));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        jLabel1.setBackground(new java.awt.Color(0, 179, 137));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ventanas/Sistema PAE.jpeg"))); // NOI18N
+
+        jMenuBar1.setBackground(new java.awt.Color(0, 94, 72));
+        jMenuBar1.setForeground(new java.awt.Color(0, 94, 72));
 
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ventanas/Instituciones (1).jpeg"))); // NOI18N
         jMenu1.setText("Instituciones");

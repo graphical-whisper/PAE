@@ -12,6 +12,8 @@ import javax.swing.table.TableRowSorter;
 import Acciones.EstablecerConexión;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author Personal
@@ -136,6 +138,8 @@ public class TablaDatosOperaciones extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(0, 94, 72));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -337,7 +341,13 @@ if (!filterText.isEmpty()) {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new AgregarOperacion().setVisible(true);
+        try {
+            new AgregarOperacion().setVisible(true);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(TablaDatosOperaciones.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(TablaDatosOperaciones.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

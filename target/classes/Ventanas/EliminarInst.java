@@ -108,6 +108,8 @@ public class EliminarInst extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 179, 137));
+
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -149,6 +151,7 @@ public class EliminarInst extends javax.swing.JFrame {
 
         jLabel1.setText("Ingresa el Id");
 
+        jButton1.setBackground(new java.awt.Color(1, 132, 101));
         jButton1.setText("Buscar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,6 +159,7 @@ public class EliminarInst extends javax.swing.JFrame {
             }
         });
 
+        jToggleButton1.setBackground(new java.awt.Color(1, 132, 101));
         jToggleButton1.setText("Eliminar Institución");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,6 +167,7 @@ public class EliminarInst extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(1, 132, 101));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\PC 4060TI\Documents\SistemaPAE\PAE\src\main\java\com\mycompany\sistemapae\InicioSesion.java
 C:\Users\PC 4060TI\Documents\SistemaPAE\PAE\src\main\java\Ventanas\EditarInst.java
 C:\Users\PC 4060TI\Documents\SistemaPAE\PAE\src\main\java\Ventanas\EliminarInst.java
@@ -16,3 +17,23 @@ C:\Users\PC 4060TI\Documents\SistemaPAE\PAE\src\main\java\Ventanas\AgregarProv.j
 C:\Users\PC 4060TI\Documents\SistemaPAE\PAE\src\main\java\Ventanas\TablaDatosInst.java
 C:\Users\PC 4060TI\Documents\SistemaPAE\PAE\src\main\java\Ventanas\EditarProv.java
 C:\Users\PC 4060TI\Documents\SistemaPAE\PAE\src\main\java\Ventanas\Inicio.java
+=======
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\Acciones\RegistroDAO.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\Ventanas\TablaDatosOperaciones.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\com\mycompany\sistemapae\EjemploFlowLayout.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\Ventanas\AgregarInst.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\com\mycompany\sistemapae\Prueba.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\com\mycompany\sistemapae\Prb.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\Ventanas\EditarProv.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\Ventanas\EliminarProv.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\Ventanas\TablaDatosInst.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\com\mycompany\sistemapae\InicioSesion.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\Ventanas\AgregarProv.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\Acciones\EstablecerConexión.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\Ventanas\AgregarOperacion.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\Ventanas\Inicio.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\com\mycompany\sistemapae\Prb2.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\Ventanas\EditarInst.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\Ventanas\EliminarInst.java
+C:\Users\rauls\Downloads\canelita_y_doom_slayer\SistemaPAE\PAE\src\main\java\Ventanas\TablaDatosProv.java
+>>>>>>> 2cb01e0e32badf38ef6d930ab5035d0f78fd3c16

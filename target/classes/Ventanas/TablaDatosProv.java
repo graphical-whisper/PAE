@@ -29,7 +29,7 @@ public class TablaDatosProv extends javax.swing.JFrame {
         initComponents();
 
         tableModel = new DefaultTableModel();
-        tableModel.setColumnIdentifiers(new Object[]{"ID", "Institución", "Departamento", "Municipio", "Teléfono", "Producto", "No.Productos"});
+        tableModel.setColumnIdentifiers(new Object[]{"Institución", "Departamento", "Municipio", "Teléfono", "Producto", "No.Productos"});
         jTable1.setModel(tableModel);
         // Crear el TableRowSorter y asignarlo a la tabla
         rowSorter = new TableRowSorter<>(tableModel);
@@ -53,7 +53,6 @@ public class TablaDatosProv extends javax.swing.JFrame {
             ResultSet rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
-                int id = rs.getInt("Id");
                 String nombre = rs.getString("Proveedor");
                 String dep = rs.getString("Departamento");
                 String ciudad = rs.getString("Municipio");
@@ -61,7 +60,7 @@ public class TablaDatosProv extends javax.swing.JFrame {
                 String producto = rs.getString("Producto");
                 int numero = rs.getInt("NoProductos");
 
-                model.addRow(new Object[]{id, nombre, dep, ciudad, tel, producto, numero});
+                model.addRow(new Object[]{nombre, dep, ciudad, tel, producto, numero});
             }
 
             con.close();
@@ -99,22 +98,24 @@ public class TablaDatosProv extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 94, 72));
+
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Id", "Proveedor", "Departamento", "Municipio", "Teléfono", "Producto", "NoProductos"
+                "Proveedor", "Departamento", "Municipio", "Teléfono", "Producto", "NoProductos"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -138,8 +139,6 @@ public class TablaDatosProv extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(3).setResizable(false);
             jTable1.getColumnModel().getColumn(4).setResizable(false);
             jTable1.getColumnModel().getColumn(5).setResizable(false);
-            jTable1.getColumnModel().getColumn(6).setResizable(false);
-            jTable1.getColumnModel().getColumn(6).setHeaderValue("NoProductos");
         }
 
         jButton1.setText("Editar");

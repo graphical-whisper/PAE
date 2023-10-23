@@ -60,6 +60,8 @@ public class AgregarOperacion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 179, 137));
+
         jScrollPane1.setViewportView(jTextPane1);
 
         jLabel1.setText("NombreInstitución");
@@ -84,6 +86,7 @@ public class AgregarOperacion extends javax.swing.JFrame {
 
         jLabel7.setText("Formulario de Registro");
 
+        jButton1.setBackground(new java.awt.Color(1, 132, 101));
         jButton1.setText("Agregar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +94,7 @@ public class AgregarOperacion extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(1, 132, 101));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

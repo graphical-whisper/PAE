@@ -99,6 +99,8 @@ public class TablaDatosInst extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 94, 72));
+
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -107,7 +109,7 @@ public class TablaDatosInst extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Institución", "Departamento", "Municipio", "Teléfono", "eMail", "No.Estudiantes"
+                "Id", "Institución", "Departamento", "Municipio", "Teléfono", "eMail", "No.Estudiantes"
             }
         ) {
             Class[] types = new Class [] {
@@ -138,6 +140,7 @@ public class TablaDatosInst extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(3).setResizable(false);
             jTable1.getColumnModel().getColumn(4).setResizable(false);
             jTable1.getColumnModel().getColumn(5).setResizable(false);
+            jTable1.getColumnModel().getColumn(6).setResizable(false);
         }
 
         jButton1.setText("Editar");

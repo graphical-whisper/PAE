@@ -15,7 +15,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Ventanas/Instituciones (1).jpeg"/>
+              <Image iconType="3" name="/Ventanas/Instituciones.jpeg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Instituciones"/>
           </Properties>
@@ -41,7 +41,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Ventanas/Proveedores.jpeg"/>
+              <Image iconType="3" name="/Ventanas/Proveedores.png.jpeg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Proveedores"/>
           </Properties>
@@ -144,7 +144,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="714" max="-2" attributes="0"/>
-              <EmptySpace pref="1099" max="32767" attributes="0"/>
+              <EmptySpace pref="1163" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

@@ -55,7 +55,7 @@ public class Inicio extends javax.swing.JFrame {
         jMenuBar1.setBackground(new java.awt.Color(0, 94, 72));
         jMenuBar1.setForeground(new java.awt.Color(0, 94, 72));
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ventanas/Instituciones (1).jpeg"))); // NOI18N
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ventanas/Instituciones.jpeg"))); // NOI18N
         jMenu1.setText("Instituciones");
 
         jMenuItem1.setText("Registrar");
@@ -76,7 +76,7 @@ public class Inicio extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ventanas/Proveedores.jpeg"))); // NOI18N
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ventanas/Proveedores.png.jpeg"))); // NOI18N
         jMenu3.setText("Proveedores");
 
         jMenuItem3.setText("Registro");
@@ -139,7 +139,7 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 714, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1099, Short.MAX_VALUE))
+                .addContainerGap(1163, Short.MAX_VALUE))
         );
 
         pack();
